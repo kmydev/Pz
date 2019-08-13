@@ -1,6 +1,6 @@
 using System;
 
-public class Paiza{
+public class Pz{
     public static void Main(){
         string line = Console.ReadLine().Trim();
         string[] arr = line.Split(' ');
