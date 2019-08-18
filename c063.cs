@@ -16,10 +16,10 @@ public class Pz{
             flowersCalendar[i] = new string(tmpchr);
         }
 
-        for (int i = 0; i < n; i++)
-        {
-            Console.WriteLine(flowersCalendar[i]);
-        }
+        //for (int i = 0; i < n; i++)
+        //{
+        //    Console.WriteLine(flowersCalendar[i]);
+        //}
         
         int max_day = 1;
         int max_flowers = 0;
