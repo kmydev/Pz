@@ -1,3 +1,3 @@
 # Pz
 
-某サイトのアレ :smile:
+某サイトのアレ :smile: :smile:
