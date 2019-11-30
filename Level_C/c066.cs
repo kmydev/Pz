@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 public class Pz{
     public static void Main(){
@@ -6,33 +7,33 @@ public class Pz{
         int m = int.Parse(arr[0]);
         int n = int.Parse(arr[1]);
         int x = int.Parse(arr[2]);
-        int[] w_M = new int[m];
-
+        
+        int [] warr = new int[m];
         for (int i = 0; i < m; i++)
         {
-            w_M[i] = int.Parse(Console.ReadLine().Trim());
+            warr[i] = int.Parse(Console.ReadLine().Trim());
         }
-        
-        int cnt = 0;
-        int tx = x;
-        for (int i = 1; i <= m; i++)
-        {
-            tx -= w_M[i-1];
-            if (tx > 0)
-            {
-                cnt++;
-            }
-            else
-            {
-                tx = x;
-                n--;
-                i--;
-                if (n <= 0) break;            
-            }
 
-            //Console.WriteLine("i={0},n={1},tx={2},w_M[i]={3},cnt={4}", i, n, tx, w_M[i], cnt);
+        int ans = 0;
+        int tm = 0;
+        for (int i = 0; i < n; i++)
+        {
+            int tx = x;
+            while (tm < m)
+            {
+                tx -= warr[tm];
+                if (tx > 0)
+                {
+                    ans++;
+                    tm++;
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
-        
-        Console.WriteLine(cnt);
+
+        System.Console.WriteLine(ans);
     }
 }
